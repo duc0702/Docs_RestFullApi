@@ -1,6 +1,10 @@
 // Navigation data structure
 const navigation = [
-  { id: "chapter1", title: "Hello ", file: "chaper1.html" },
+  { id: "chapter1", title: "Các khái niệm về Spring ", file: "chaper1.html" },
+  { id: "chapter2", title: "Kiến trúc ứng dụng web ", file: "chaper2.html" },
+  { id: "chapter3", title: "Spring Sercurity ", file: "chaper3.html" },
+  { id: "chapter4", title: "Restful API với Spring ", file: "chaper4.html" },
+  { id: "chapter5", title: "Spring Data với JPA và Hibernate ", file: "chaper5.html" },
 
 ];
 

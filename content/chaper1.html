@@ -1,11 +1,74 @@
-<h1>Minh ok</h1>
-<div class="code-block">
-  <button class="copy-button" onclick="copyCode(this)">Sao chép</button>
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các Khái Niệm Về Spring</title>
 
+  </head>
+  <body>
+    <div class="container">
+      <h1>Các khái niệm về Spring</h1>
 
-  <pre>
+      <h3>I. Java Spring là gì?</h3>
+      <p>1. Java Spring là một "framework" sử dụng ngôn ngữ Java.</p>
+      <p>=> Để học Spring, chúng ta "bắt buộc" cần biết "cú pháp của Java".</p>
+      <p>2. Spring Boot là gì?</p>
+      <p>Spring Boot = Spring + Boot (Bootstrapping app - chạy dự án lên/start
+        app)</p>
+      <ul>
+        <li>Đơn giản hóa quá trình xây dựng Java app</li>
+        <li>Giảm thiểu tối đa quá trình "cấu hình" dự án</li>
+        <li>Đơn giản hóa quản lý thư viện và cấu hình qua Maven/Gradle</li>
+        <li>Cung cấp sẵn server để chạy ứng dụng</li>
+        <li>Không cần cài đặt server riêng lẻ</li>
+      </ul>
 
+      <h3>II. Cấu trúc dự án Spring</h3>
+      <ul>
+        <li><strong>src:</strong> Chứa code chính của dự án</li>
+        <li><strong>resources:</strong> Chứa tài nguyên như HTML, CSS, JS, file
+          cấu hình...</li>
+        <li><strong>test:</strong> Thư mục viết code test</li>
+        <li><strong>target:</strong> Mã nguồn Java sau khi được dịch (JVM sẽ
+          chạy thư mục target)</li>
+        <li><strong>Gradle/Maven:</strong> Công cụ build và quản lý
+          dependencies</li>
+        <li><strong>gradlew:</strong> dành cho macOS</li>
+        <li><strong>gradlew.bat:</strong> dành cho Windows</li>
+        <li><strong>pom.xml (với Maven), build.gradle.kts (với Gradle):</strong>
+          Dùng để xử lý project (compile/build & run)</li>
+      </ul>
 
-    logicc 
-  </pre>
-</div>
+      <h3>III. Kiến trúc của Spring Framework</h3>
+      <p><a
+          href="https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/overview.html"
+          target="_blank">Tài liệu Spring Framework</a></p>
+
+      <h3>2. Các khái niệm chính:</h3>
+      <h3>i. <span class="highlight">Spring Container</span></h3>
+      <ul>
+        <li><strong>Thùng chứa:</strong> Thành phần cốt lõi của Spring
+          Framework</li>
+        <li><strong>Quản lý Bean:</strong> Điều phối toàn bộ vòng đời Bean</li>
+        <li><strong>Dependency Injection (DI):</strong> Cung cấp phụ thuộc cho
+          Bean</li>
+        <li><strong>Inversion of Control (IoC):</strong> Container quản lý luồng
+          ứng dụng</li>
+      </ul>
+
+      <h3>ii. Bean</h3>
+      <p>Bean là đối tượng được định nghĩa trong Spring Container thông qua XML,
+        Java config, hoặc annotation. (Hiểu nhanh là class trong Java ấy v:)</p>
+
+      <h3>iii. Dependency Injection</h3>
+      <p>(Nghe giảng nhé :v)</p>
+
+      <h3>iv. Annotation</h3>
+      <p>Annotation là cách "trang trí" class của Java để tăng sức mạnh.
+        (<em>decorator</em>) Mục đích là "tăng thêm sức mạnh" cho class đấy
+        (<em>meta-data</em>).</p>
+    </div>
+  </body>
+</html>

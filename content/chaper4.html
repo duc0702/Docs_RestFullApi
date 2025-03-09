@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu về RESTful API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        code {
+            background: #eee;
+            padding: 5px;
+            display: block;
+            border-left: 3px solid #333;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Giới thiệu về RESTful API</h1>
+  
+    <h2>Kiến thức cần nắm rõ</h2>
+    <h3>1. JSON (JavaScript Object Notation)</h3>
+    <p><a href="https://www.json.org/json-en.html">Tài liệu tại đây</a></p>
+    <p>Khi dịch JSON ra ta thấy ngay từ khoá <strong>Object</strong>, tức là đối tượng hay class trong Java.</p>
+    <p>Với JavaScript, JSON là một kiểu dữ liệu dạng text hay một chuỗi ký tự (string), ví dụ:</p>
+    <code>{"name":"John", "age":30, "car":null}</code>
+    <p>Java và JavaScript sẽ giao tiếp với nhau thông qua JSON.</p>
+    <p>Nói chuyện như thế nào? Phải đi code mới rõ được! :v</p>
+    <p><strong>Nhắc lại:</strong> Ai học yếu hướng đối tượng (OOP) thì nên nắm chắc kiến thức rồi hãy học món này.</p>
+    
+    <h3>2. HTTPS</h3>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">Tài liệu tại đây</a></p>
+    <p>Hiểu đơn giản, HTTP là công cụ giúp ta truy cập dữ liệu trên internet.</p>
+    <p>Mình sẽ ví dụ với các thao tác thêm, sửa, xoá: client giao tiếp với server thông qua các HTTP Method (GET, PUT, POST, DELETE,...).</p>
+    
+    <h3>Cấu trúc HTTP Request (Client gửi lên server)</h3>
+    <ul>
+        <li><strong>Request line:</strong> method + URL</li>
+        <li><strong>Header variable</strong></li>
+        <li><strong>Message:</strong> JSON</li>
+    </ul>
+    
+    <h3>Cấu trúc HTTP Response (Server trả về cho client)</h3>
+    <ul>
+        <li><strong>Version of the HTTP</strong></li>
+        <li><strong>Status code + status message</strong></li>
+        <li><strong>Message:</strong> JSON</li>
+    </ul>
+    
+    <h3>3. API</h3>
+    <p><a href="https://jsonplaceholder.typicode.com/">Tài liệu tại đây</a></p>
+    <p>API là link URL ta định nghĩa tại backend.</p>
+    <p>Frontend sẽ dùng URL đó để gửi yêu cầu lên backend.</p>
+    
+    <h3>4. Mô hình RESTful API</h3>
+    <p>RESTful API (Representational State Transfer) là một kiểu kiến trúc phần mềm cho các dịch vụ web.</p>
+    <p>Trong đó, các tài nguyên (resources) được xác định thông qua URL, và thao tác với các tài nguyên này được thực hiện thông qua các phương thức HTTP như:</p>
+    <ul>
+        <li>GET - Dùng để lấy dữ liệu từ server mà không làm thay đổi dữ liệu.</li>
+        <li>POST - Dùng để tạo mới dữ liệu trên server.</li>
+        <li>PUT - Dùng để cập nhật toàn bộ dữ liệu của một tài nguyên trên server.</li>
+        <li>DELETE - Dùng để xóa dữ liệu khỏi server.</li>
+    </ul>
+    <p><strong>Tóm lại:</strong> Chúng ta sẽ viết API chứa các chức năng CRUD để frontend xử lý.</p>
+</body>
+</html>

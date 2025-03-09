@@ -1,0 +1,70 @@
+<h1>Thao tác xử lý dữ liệu với ORM (Object Relational Mapping)</h1>
+<h2>Spring Data</h2>
+<p>Spring Data là công cụ giúp xử lý dữ liệu trong hệ sinh thái của Spring.</p>
+<p>Mục tiêu của Spring Data là đơn giản hóa quá trình truy cập và sử dụng dữ liệu.</p>
+<ul>
+    <li>Cung cấp đối tượng <strong>Repository</strong> để truy cập database.</li>
+    <li>Lập trình viên không cần viết câu lệnh SQL mà vẫn có thể thao tác với database.</li>
+</ul>
+<h3>Spring Data JPA (Java Persistence API)</h3>
+<p>Tài liệu tham khảo: <a href="https://spring.io/projects/spring-data" target="_blank">Spring Data JPA</a></p>
+<p>Ở chương 2 (Hello World), chúng ta đã cấu hình rồi, nhưng nếu gặp lỗi liên quan đến SQL hoặc database, hãy kiểm tra lại cấu hình.</p>
+
+<h2>Các Dependencies Cần Cấu Hình</h2>
+<div class="code-block">
+    <button class="copy-button" onclick="copyCode(this)">Sao chép</button>
+    <pre>
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-data-jdbc&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;com.mysql&lt;/groupId&gt;
+    &lt;artifactId&gt;mysql-connector-j&lt;/artifactId&gt;
+    &lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;
+    </pre>
+</div> <h2>Định nghĩa Repository Query</h2>
+<p><strong>Từ khóa truy vấn tại:</strong>  <a href="https://docs.spring.io/spring-data/jpa/reference/repositories/query-keywords-reference.html" target="_blank">Đây</a> </p>
+<p><strong>Định nghĩa truy vấn tại:</strong>  <a href="https://docs.spring.io/spring-data/jpa/reference/repositories/query-methods-details.html" target="_blank">Đây</a></p>
+
+<h2>Áp dụng:</h2>
+<ul>
+    <li>Định nghĩa tên method theo các quy tắc</li>
+    <li>Spring sẽ tự động chuyển “tên method” thành câu lệnh truy vấn database</li>
+    <li>Nhận kết quả trả ra từ Repository</li>
+</ul>
+
+<h2>Cách Read/Write Data</h2>
+<p>Với database, chúng ta có 2 thao tác:</p>
+<ul>
+    <li><strong>READ</strong> (đọc dữ liệu)</li>
+    <li><strong>WRITE</strong> (update/insert/delete) – ghi/sửa đổi dữ liệu</li>
+</ul>
+
+<h2>Cơ sở dữ liệu</h2>
+<ul>
+    <li><strong>Cơ sở dữ liệu quan hệ</strong> (relational database)</li>
+    <li><strong>Cơ sở dữ liệu phi quan hệ</strong> (NoSQL)</li>
+</ul>
+<p>Java là một ngôn ngữ hướng đối tượng, nên mình lựa chọn cơ sở dữ liệu quan hệ (relational database).</p>
+
+<h2>Để thực hiện điều trên, chúng ta có 2 cách:</h2>
+<ul>
+    <li><strong>Sử dụng JDBC (Java Database Connectivity)</strong>: Là cách chúng ta kiểm soát việc sử dụng database thông qua câu lệnh truy vấn SQL.</li>
+    <li><strong>Sử dụng ORM (Object Relational Mapping)</strong>: Là cách chúng ta truy cập/sử dụng database thông qua các object định nghĩa trong code.</li>
+</ul>
+
+<h2>Hibernate vs Spring Data JPA</h2>
+<p>Tham khảo: <a href="https://www.youtube.com/watch?app=desktop&v=4Py9RTVWyvE" target="_blank">YouTube</a>,
+    <a href="https://docs.jboss.org/hibernate/orm/6.4/introduction/html_single/Hibernate_Introduction.html#introduction" target="_blank">Docs</a> </p>
+<p><strong>Hibernate</strong> là một framework ORM trong Java. Nó giúp ánh xạ các đối tượng Java vào các bảng trong cơ sở dữ liệu quan hệ, hỗ trợ CRUD, truy vấn, và quản lý dữ liệu.</p>
+<p><strong>Spring Data JPA</strong> là một phần của Spring Framework, giúp trừu tượng hóa JPA để tương tác với cơ sở dữ liệu, có thể sử dụng Hibernate hoặc các JPA implementation khác.</p>
+
+<p>Ở trong khoá này (và cả khoá sau nếu có) mình sẽ sử dụng cả 2 luôn nhé!</p>
+
+<h2>Ok Lí thuyết thế đủ rồi. Chương sau ta sẽ bắt đầu code :v.</h2>
